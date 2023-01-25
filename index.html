@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+	<title>Kakao Developers 알림톡 전송시스템</title>
+<head>
+<h1>Kakao Developers 알림톡 전송시스템 [내부망]<h1>
+<h2>환영합니다.<br>위 시스템은 Windows IIS의 시스템을 활용하기 때문에 PC가 켜져있어야 사용할 수 있습니다.<br>FTP 서버를 열람하시려면 아래 비밀번호를 입력하십시오.<h2>
+<a href="https://developers.kakao.com/tool/template-builder/app" title="Kakao Developers 수정">
+		Kakao Developers 수정
+	</a>
+<h2>2023년 1월 21일 업데이트 예정<h2>
+<h4>업데이트 항목<br> · 시스템 UI 변경<BR> · 네이버 로그인-카카오 로그인 적용(테스트)<BR> ·· 업데이트 시간인 1월 21일 오전 10시부터 오후 11시 59분까지 접속이 차단됩니다.<BR> ·· 네이버와 카카오 서비스는 테스트 기간이므로 서비스가 불안정할 수 있습니다. (예고없이 테스트가 끝나거나 서비스가 중단될 수 있음[테스트기간에 로그인을 했기 때문에 정보는 남지 않습니다. 그리고, 서비스가 중단이 되더라도 사용자의 개인정보는 파기됩니다.(24시간관리청 개인정보처리방침에 의해 3년간 보관됩니다.])<H4>
+
+<form name="loginForm">
+
+<p style="margin-bottom:20;"> 비밀번호입력     
+
+<input name="pass" type="password" size="12">
+
+<input type="button" value="확 인" onClick="login_page(this.form)" style="font-weight:bolder; font-size:4mm;">
+
+<br>
+
+</form>
+<script language="javascript">
+
+<!--
+
+function login_page(form) {
+
+if (form.pass.value=="120331") {
+
+location="/security%20program.html"
+
+} else {
+
+alert("패스워드가 틀립니다.")
+
+}
+
+}
+
+</script>
+<br>
+<a href="/Personal%20information%20processing%20policy/Personal%20information%20processing%20policy.html">개인정보 처리방침</a>
