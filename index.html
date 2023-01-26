@@ -6,9 +6,6 @@
 <a href="https://developers.kakao.com/tool/template-builder/app" title="Kakao Developers 수정">
 		Kakao Developers 수정
 	</a>
-<h2>2023년 1월 28일 업데이트 예정<h2>
-<h4>업데이트 항목<br> · 시스템 UI 변경<BR> · 네이버 로그인-카카오 로그인 적용(테스트)<BR> ·· 업데이트 시간인 1월 28일 오전 10시부터 오후 11시 59분까지 접속이 차단됩니다.<BR> ·· 네이버와 카카오 서비스는 테스트 기간이므로 서비스가 불안정할 수 있습니다. (예고없이 테스트가 끝나거나 서비스가 중단될 수 있음[테스트기간에 로그인을 했기 때문에 정보는 남지 않습니다. 그리고, 서비스가 중단이 되더라도 사용자의 개인정보는 파기됩니다.(24시간관리청 개인정보처리방침에 의해 3년간 보관됩니다.])<H4>
-
 <form name="loginForm">
 
 <p style="margin-bottom:20;"> 비밀번호입력     
@@ -39,5 +36,68 @@ alert("패스워드가 틀립니다.")
 }
 
 </script>
+	   <div id="menu">
+      <div>
+        <span>마우스를 갖다 대세요.</span>
+        <p class="arrow_box">말풍선 등장!</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+#menu {
+  width: 200px;
+  margin: 100px auto;
+  background: #f3f3f3;
+  border: 1px solid #d8d8d8;
+  text-align: left;
+}
+#menu div {
+  position: relative;
+  display: inline-block;
+}
+
+span {
+  display: flex;
+  width: 200px;
+  padding: 2px 16px;
+  cursor: pointer;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  left: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: ' ';
+}
+
+span:hover + p.arrow_box {
+  display: block;
+}
+</style>
 <br>
 <a href="/internetkakao/Personal%20information%20processing%20policy/Personal%20information%20processing%20policy.html">개인정보 처리방침</a>
