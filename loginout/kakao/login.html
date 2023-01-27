@@ -8,14 +8,14 @@
     <title>매인 페이지</title>
 </head>
 <body>
-    <a href="#0" id="kakaoLogin"><img src="/kakao_login.png" alt="카카오계정 로그인" style="height: 100px;"/></a>
+    <a href="#0" id="kakaoLogin"><img src="internetkakao/loginout/kakao/kakao_login.png" alt="카카오계정 로그인" style="height: 100px;"/></a>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         function saveToDos(token) { //item을 localStorage에 저장합니다. 
             typeof(Storage) !== 'undefined' && sessionStorage.setItem('AccessKEY', JSON.stringify(token)); 
         };
 
-        window.Kakao.init('본인 JAVASCRIPT API 키');
+        window.Kakao.init('bc46577456dcc8c2c29483000ac0cb30');
         
         function kakaoLogin() {
             window.Kakao.Auth.login({
