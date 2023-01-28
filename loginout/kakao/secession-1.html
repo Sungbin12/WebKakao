@@ -1,0 +1,19 @@
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        window.Kakao.init('	bc46577456dcc8c2c29483000ac0cb30');
+
+function secession() {
+	Kakao.API.request({
+    	url: '/v1/user/unlink',
+    	success: function(response) {
+    		console.log(response);
+    		//callback(); //연결끊기(탈퇴)성공시 서버에서 처리할 함수
+    		window.location.href='/internetkakao/loginout/kakao/secession-2.html'
+    	},
+    	fail: function(error) {
+    		console.log('탈퇴 미완료')
+    		console.log(error);
+    	},
+	});
+};
+    </script>
