@@ -1,0 +1,33 @@
+@font-face { font-family: 'font'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff'); font-weight: normal; font-style: normal; }
+h1 {
+    font-family: 'font', sans-serif;
+    font-size: 25px;
+}
+html {
+    text-align: center;
+}
+input {
+    width: 80%;
+    height: 50px;
+    border: 2px solid black;
+    padding-left: 10px;
+}
+#id_ {
+    font-size: 20px;
+}
+#pass_ {
+    font-size: 20px;
+}
+#submit {
+    width: 200px;
+    height: 75px;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-family: 'font', sans-serif;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color:lightgreen;
+}

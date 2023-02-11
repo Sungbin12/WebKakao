@@ -1,0 +1,43 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24시간관리청 통합로그인</title>
+    <link rel="stylesheet" href="/login.css">
+
+</head>
+<body>
+    <h1 style="font-size: 4em;">78</h1>
+
+    <h1>ID</h1>
+
+    <form id="idform">
+        <input type="id" name="id" id="id_" placeholder="아이디를 입력해주세요...">
+    </form>
+
+    <h1>PW</h1>
+
+    <form id="passform">
+        <input type="password" name="pass" id="pass_" placeholder="비밀번호를 입력해주세요...">
+    </form>
+    <br>
+    <br>
+
+    <button id="submit">로그인</button>
+
+
+    <!--JAVASCRIPT START-->
+    <script>
+    document.getElementById('submit').onclick = function() {
+        var ID = document.getElementById('id_').value;
+        var pass = document.getElementById('pass_').value;
+        if (ID === "kakaomassageadmin" && pass === "120331") {
+                 alert("로그인에 성공하였습니다."); 
+    document.location.href="http://24hourmanagementoffice.gne.p-e.kr/" ; 
+        }
+        else {
+            alert("로그인에 실패하였습니다.\n다시 한번 ID 또는 PW를 확인해 주세요.");
+        }
+    }
+    </script>
+
+</body></html>
