@@ -10,13 +10,31 @@
 <A HREF="/internetkakao/Kakao%20Developers/%EC%83%88%20%ED%8F%B4%EB%8D%94/">새 폴더</A><br><A HREF="/Kakao%20Developers/%EC%98%81%EC%97%85%EC%A0%95%EC%A7%80.hwp">영업정지.hwp</A><br>
 <A HREF="/internetkakao/Kakao%20Developers/%EC%BD%94%EB%A1%9C%EB%82%98%20-%2019%20=/">코로나 - 19 =</A><br></pre><hr>
 
-<button onclick="news()">로그아웃</button>
-<script>
-function news() {
-  alert("로그아웃을 하시겠습니까?");
-  window.location.href = "/internetkakao/loginout/kakao/logout-1.html";
-}
+<button class="api-btn" onclick="kakaoLogout()">로그아웃</button>
+
+<script type="text/javascript" src="http://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+	Kakao.init("bc46577456dcc8c2c29483000ac0cb30");
+
+	function kakaoLogout() {
+	    if (Kakao.Auth.getAccessToken()) {
+	      Kakao.API.request({
+	        url: '/v1/user/unlink',
+	        success: function (response) {
+	        	console.log(response)
+	        	alert('정상적으로 로그아웃 처리가 완료되었습니다.');
+	        	window.location.href = 'KakaoLogin.jsp';
+	        },
+	        fail: function (error) {
+	          console.log(error)
+	        },
+	      })
+	      Kakao.Auth.setAccessToken(undefined)
+	    }
+	  }  
 </script>
+</body>
+</html>
  | 
 
 <button onclick="sungbin()">탈퇴</button>
