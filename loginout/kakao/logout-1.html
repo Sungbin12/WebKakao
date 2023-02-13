@@ -1,16 +1,24 @@
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script>
 
-        window.Kakao.init('bc46577456dcc8c2c29483000ac0cb30');
-        window.Kakao.Auth.setAccessToken(JSON.parse(sessionStorage.getItem('bc46577456dcc8c2c29483000ac0cb30'))); //sessionStorage에 저장된 사용자 엑세스 토큰 받아온다.
-        
-        function kakaoLogout() {
-            if (!Kakao.Auth.getAccessToken()) {
-                console.log('Not logged in.');
-                return;
-            }
-            Kakao.Auth.logout(function(response) {
-                alert(response +' logout');
-                window.location.href='/internetkakao/loginout/kakao/logout-2.html'
-            });
-        };
+        <script type="text/javascript" src="http://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+	Kakao.init("bc46577456dcc8c2c29483000ac0cb30");
+
+	function kakaoLogout() {
+	    if (Kakao.Auth.getAccessToken()) {
+	      Kakao.API.request({
+	        url: '/v1/user/unlink',
+	        success: function (response) {
+	        	console.log(response)
+	        	window.location.href = '/internetkakao/loginout/kakao/logout-2.html';
+	        },
+	        fail: function (error) {
+	          console.log(error)
+	        },
+	      })
+	      Kakao.Auth.setAccessToken(undefined)
+	    }
+	  }  
+</script>
+</body>
+</html>
